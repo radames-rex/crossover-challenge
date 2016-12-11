@@ -59,8 +59,39 @@ body {
   margin-top: 28px;
 }
 
-.myRepo__container{
+.main__container{
   padding: 32px;
+}
+
+.dashboard{
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dashboard__title{
+  display: flex;
+  flex-direction: row;
+  margin: 2px 0 2px 0;
+  padding: 8px;
+}
+
+.dashboard__title-element{
+  margin: 0 20px 0 0;
+}
+
+.dashboard__item{
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  margin: 2px 0 2px 0;
+  padding: 8px;
+  border: 2px solid red;
+}
+
+.dashboard__item-element{
+  margin: 0 20px 0 0;
 }
 
 /* Responsive: Portrait tablets and up */

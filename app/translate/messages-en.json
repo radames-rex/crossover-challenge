@@ -8,6 +8,13 @@
 		}
 	},
 	"dashboard" : {
-		"owner" : "Owner"
+		"type": "Changelist/Build",
+		"owner" : "Owner",
+		"time": "Time Started",
+		"state": "State",
+		"metrics": "Metrics",
+		"build": "Build",
+		"unit": "Unit Test",
+		"function": "Functional Test"
 	}
 }
