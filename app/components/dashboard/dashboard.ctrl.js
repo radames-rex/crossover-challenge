@@ -4,63 +4,79 @@
 
   /**
    * @ngdoc function
-   * @name challengeApp.controller:DashboardCtrl
+   * @type challengeApp.controller:DashboardCtrl
    * @description
    * # DashboardCtrl
    * Controller of the challengeApp
    */
-  var DashboardCtrl = function($scope, DashboardFactory, $timeout) {
+  var DashboardCtrl = function($scope) {
 
-    $scope.repos = [];
-
-    var replaceSpecialChars = function(str) {
-      str = str.replace(/[ÀÁÂÃÄÅ]/, "A");
-      str = str.replace(/[àáâãäå]/, "a");
-      str = str.replace(/[ÈÉÊË]/, "E");
-      str = str.replace(/[èéêë]/, "e");
-      str = str.replace(/[ÌÍÎÏ]/, "I");
-      str = str.replace(/[ìíîï]/, "i");
-      str = str.replace(/[ÒÓÔÖ]/, "O");
-      str = str.replace(/[òóôö]/, "o");
-      str = str.replace(/[ÙÚÛÜ]/, "U");
-      str = str.replace(/[ùúûü]/, "u");
-      str = str.replace(/[Ç]/, "C");
-      str = str.replace(/[ç]/, "c");
-      str = str.toLowerCase();
-      return str.replace(/[^a-z0-9\s]/gi, '');
-    };
-
-    var formatRepos = function(repos) {
-      var reposFormatted = [];
-      angular.forEach(repos, function(value){
-        reposFormatted.push({
-          owner: value.owner.login,
-          name: value.name,
-          language: value.language,
-          stars: value.stargazers_count,
-          forks: value.forks_count
-        });
-      });
-      return reposFormatted;
-    };
-
-    $scope.ignoreAccents = function(item) {
-      if($scope.search !== undefined){
-        var text = replaceSpecialChars(item.name);
-        var search = replaceSpecialChars($scope.search.undefined);
-        return text.indexOf(search) > -1;
-      }else{
-        return true;
-      }
-    };
-
-    DashboardFactory.getDashboard('radames-rex').then(function(data){
-      $scope.repos = formatRepos(data);
-    });
+    // Mock-up info data
+    $scope.datalist = [{
+      name: "Tenrox-R1_1235",
+      type: "build",
+      owner: "",
+      time: "",
+      state: "Pending",
+      metrics: 0,
+      build: 0,
+      unit: 0,
+      function: 0
+    },{
+      name: "432462",
+      type: "firewall",
+      owner: "jtuck",
+      time: "4/18/2014 12:12pm",
+      state: "Running",
+      metrics: 30,
+      build: 0,
+      unit: 0,
+      function: 0
+    },{
+      name: "432461",
+      type: "firewall",
+      owner: "samy",
+      time: "4/18/2014 10:53am",
+      state: "Rejected",
+      metrics: 100,
+      build: 0,
+      unit: 0,
+      function: 0
+    },{
+      name: "Tenrox-R1_1234",
+      type: "build",
+      owner: "",
+      time: "4/17/2014 9:42am",
+      state: "Complete",
+      metrics: 100,
+      build: 100,
+      unit: 100,
+      function: 100
+    },{
+      name: "432460",
+      type: "firewall",
+      owner: "samy",
+      time: "4/17/2014 7:51am",
+      state: "Rejected",
+      metrics: 100,
+      build: 0,
+      unit: 0,
+      function: 0
+    },{
+      name: "432459",
+      type: "firewall",
+      owner: "samy",
+      time: "4/16/2014 6:43am",
+      state: "Accepted",
+      metrics: 100,
+      build: 100,
+      unit: 100,
+      function: 100
+    }];
 
   };
 
-  DashboardCtrl.$inject = ['$scope', 'DashboardFactory', '$timeout'];
+  DashboardCtrl.$inject = ['$scope'];
 
   angular
     .module('challengeApp')

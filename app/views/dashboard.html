@@ -1,15 +1,23 @@
-<div class="dashboard">
+<section class="dashboard">
   <div class="dashboard__title">
-    <span>{{ 'owner' | translate }}</span>
-    <span>{{ 'owner' | translate }}</span>
-    <span>{{ 'owner' | translate }}</span>
-    <span>{{ 'owner' | translate }}</span>
-    <span>{{ 'owner' | translate }}</span>
-    <span>{{ 'owner' | translate }}</span>
-    <span>{{ 'owner' | translate }}</span>
-    <span>{{ 'owner' | translate }}</span>
+    <div class="dashboard__title-element" style="width: 140px;">{{ 'dashboard.type' | translate }}</div>
+    <div class="dashboard__title-element" style="width: 45px;">{{ 'dashboard.owner' | translate }}</div>
+    <div class="dashboard__title-element" style="width: 150px;">{{ 'dashboard.time' | translate }}</div>
+    <div class="dashboard__title-element" style="width: 85px;">{{ 'dashboard.state' | translate }}</div>
+    <div class="dashboard__title-element" style="width: 45px;">{{ 'dashboard.metrics' | translate }}</div>
+    <div class="dashboard__title-element" style="width: 45px;">{{ 'dashboard.build' | translate }}</div>
+    <div class="dashboard__title-element" style="width: 45px;">{{ 'dashboard.unit' | translate }}</div>
+    <div class="dashboard__title-element" style="width: 45px;">{{ 'dashboard.function' | translate }}</div>
   </div>
   <div class="dashboard__item" ng-repeat="data in datalist">
-    oi
+    <div class="dashboard__item-element" style="width: 40px;">{{ data.type }}</div>
+    <div class="dashboard__item-element" style="width: 140px;"><a href="#">{{ data.name }}</a></div>
+    <div class="dashboard__item-element" style="width: 45px;">{{ data.owner }}</div>
+    <div class="dashboard__item-element" style="width: 150px;">{{ data.time }}</div>
+    <div class="dashboard__item-element" style="width: 85px;">{{ data.state }}</div>
+    <div class="dashboard__item-element" style="width: 45px;">{{ data.metrics }}</div>
+    <div class="dashboard__item-element" style="width: 45px;">{{ data.build }}</div>
+    <div class="dashboard__item-element" style="width: 45px;">{{ data.unit }}</div>
+    <div class="dashboard__item-element" style="width: 45px;">{{ data.function }}</div>
   </div>
-</div>
+</section>
