@@ -9,15 +9,68 @@
     <div class="dashboard__title-element" style="width: 45px;">{{ 'dashboard.unit' | translate }}</div>
     <div class="dashboard__title-element" style="width: 45px;">{{ 'dashboard.function' | translate }}</div>
   </div>
-  <div class="dashboard__item" ng-repeat="data in datalist">
-    <div class="dashboard__item-element" style="width: 40px;">{{ data.type }}</div>
-    <div class="dashboard__item-element" style="width: 140px;"><a href="#">{{ data.name }}</a></div>
-    <div class="dashboard__item-element" style="width: 45px;">{{ data.owner }}</div>
-    <div class="dashboard__item-element" style="width: 150px;">{{ data.time }}</div>
-    <div class="dashboard__item-element" style="width: 85px;">{{ data.state }}</div>
-    <div class="dashboard__item-element" style="width: 45px;">{{ data.metrics }}</div>
-    <div class="dashboard__item-element" style="width: 45px;">{{ data.build }}</div>
-    <div class="dashboard__item-element" style="width: 45px;">{{ data.unit }}</div>
-    <div class="dashboard__item-element" style="width: 45px;">{{ data.function }}</div>
+  <div class="dashboard__items" ng-repeat="data in datalist">
+    <div class="dashboard__item">
+      <div class="dashboard__item-element" style="width: 40px;">{{ data.type }}</div>
+      <div class="dashboard__item-element" style="width: 140px;"><a href="#">{{ data.name }}</a></div>
+      <div class="dashboard__item-element" style="width: 45px;">{{ data.owner }}</div>
+      <div class="dashboard__item-element" style="width: 150px;">{{ data.time }}</div>
+      <div class="dashboard__item-element" style="width: 85px;">{{ data.state }}</div>
+      <div class="dashboard__item-element" style="width: 45px;">{{ data.metrics }}</div>
+      <div class="dashboard__item-element" style="width: 45px;">{{ data.build }}</div>
+      <div class="dashboard__item-element" style="width: 45px;">{{ data.unit }}</div>
+      <div class="dashboard__item-element" style="width: 45px;">{{ data.function }}</div>
+    </div>
+
+    <div class="dashboard__details" ng-show="true">
+      <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Small</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-x1 card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+      </md-card>
+
+      <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Small</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-x1 card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+      </md-card>
+
+      <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Small</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-x1 card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+      </md-card>
+
+      <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Card with image</span>
+            <span class="md-subhead">Small</span>
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-x1 card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+      </md-card>
+    </div>
+
   </div>
 </section>
