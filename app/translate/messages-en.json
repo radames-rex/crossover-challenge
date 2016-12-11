@@ -1,0 +1,13 @@
+{
+	"general" : {
+		"welcome" : "Dashboard",
+		"back" : "Back",
+		"others" : "Others",
+		"error" : {
+			"request" : "Try Again!"
+		}
+	},
+	"dashboard" : {
+		"owner" : "Owner"
+	}
+}
