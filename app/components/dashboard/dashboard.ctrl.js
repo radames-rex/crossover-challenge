@@ -164,7 +164,7 @@
       act: "Merged Build"
     }];
 
-    var resetFulls =  function(){
+    $scope.resetFulls =  function(){
       angular.forEach($scope.datalist, function(value){
         value.full = false;
       });
@@ -172,7 +172,7 @@
 
     $scope.openFull = function(data){
       if(!data.full){
-        resetFulls();
+        $scope.resetFulls();
         data.full = true;
       }else{
         data.full = false;

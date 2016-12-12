@@ -1,4 +1,4 @@
-# my-repositories
+# Cross | Over Challenge
 
 ## Get Started
 
@@ -10,13 +10,17 @@ Para instalar as demais dependências de desenvolvimento:
 
 ```npm install```
 
-Para instalas as demais dependências de front-end:
+Para instalar as demais dependências de front-end:
 
 ```bower install```
 
 ou
 
 ```sudo bower install --allow-root```
+
+Para instalar demais dependências de teste:
+
+```npm install grunt-karma karma karma-phantomjs-launcher karma-jasmine jasmine-core phantomjs-prebuilt --save-dev```
 
 ## Build & development
 
