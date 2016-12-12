@@ -9,6 +9,11 @@ body {
   padding: 0;
 }
 
+a, a:active, a:link, a:visited{
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -66,7 +71,7 @@ body {
 .dashboard{
   padding: 32px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -85,7 +90,6 @@ body {
   display: flex;
   flex-direction: column;
   margin: 2px 0 2px 0;
-  border: 2px solid red;
 }
 
 .dashboard__item{
@@ -97,11 +101,51 @@ body {
 
 .dashboard__item-element{
   margin: 0 20px 0 0;
+  align-content: center;
+  align-items: center;
+}
+
+.dashboard__item-element img{
+  width: 24px;
+  height: 24px;
+}
+
+.dashboard__item-element div{
+  height: 26px;
 }
 
 .dashboard__details{
   display: flex;
   flex-flow: row;
+}
+
+.content--text{
+  padding-top: 5px;
+}
+
+.content--coverage{
+  border: 1px solid gray;
+  background-color: lightgray;
+}
+
+.content--gray{
+  border: 2px solid gray;
+  color: gray;
+}
+
+.content--blue{
+  border: 2px solid blue;
+  color: blue;
+}
+
+.content--red{
+  border: 2px solid red;
+  color: red;
+}
+
+.content--green{
+  border: 2px solid green;
+  color: green;
 }
 
 /* Responsive: Portrait tablets and up */
