@@ -27,7 +27,8 @@
       unit: 0,
       colorunit: "",
       functional: 0,
-      colorfunc: ""
+      colorfunc: "",
+      full: false
     },{
       name: "432462",
       type: "firewall",
@@ -43,7 +44,8 @@
       unit: 0,
       colorunit: "",
       functional: 0,
-      colorfunc: ""
+      colorfunc: "",
+      full: false
     },{
       name: "432461",
       type: "firewall",
@@ -59,7 +61,8 @@
       unit: 100,
       colorunit: "green",
       functional: 100,
-      colorfunc: "green"
+      colorfunc: "green",
+      full: false
     },{
       name: "Tenrox-R1_1234",
       type: "build",
@@ -75,7 +78,8 @@
       unit: 100,
       colorunit: "green",
       functional: 100,
-      colorfunc: "green"
+      colorfunc: "green",
+      full: false
     },{
       name: "432460",
       type: "firewall",
@@ -91,7 +95,8 @@
       unit: 0,
       colorunit: "",
       functional: 0,
-      colorfunc: ""
+      colorfunc: "",
+      full: false
     },{
       name: "432459",
       type: "firewall",
@@ -107,8 +112,24 @@
       unit: 100,
       colorunit: "green",
       functional: 100,
-      colorfunc: "green"
+      colorfunc: "green",
+      full: false
     }];
+
+    var resetFulls =  function(){
+      angular.forEach($scope.datalist, function(value){
+        value.full = false;
+      });
+    };
+
+    $scope.openFull = function(data){
+      if(!data.full){
+        resetFulls();
+        data.full = true;
+      }else{
+        data.full = false;
+      }
+    };
 
   };
 

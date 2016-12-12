@@ -14,7 +14,7 @@
       <div class="dashboard__item-element" style="width: 35px;">
         <img src="images/icons/{{ data.imgtype }}" alt="{{ data.type }}" />
       </div>
-      <div class="dashboard__item-element content--text" style="width: 140px;"><span><a href="#">{{ data.name }}</a></span></div>
+      <div class="dashboard__item-element content--text" style="width: 140px;"><span><a href="#" ng-click="openFull(data)">{{ data.name }}</a></span></div>
       <div class="dashboard__item-element content--text" style="width: 45px;"><span>{{ data.owner }}</span></div>
       <div class="dashboard__item-element content--text" style="width: 150px;"><span>{{ data.time }}</span></div>
       <div class="dashboard__item-element content--text" style="width: 85px;"><span>{{ data.state }}</span></div>
@@ -32,7 +32,7 @@
       </div>
     </div>
 
-    <div class="dashboard__details" ng-show="false">
+    <div class="dashboard__details" ng-show="data.full">
       <md-card md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch>
         <md-card-title>
           <md-card-title-text>
