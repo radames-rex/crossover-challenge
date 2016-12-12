@@ -25,13 +25,6 @@ angular
     main: '/main',
     dashboard: '/dashboard'
   })
-  .constant('REQUEST', {
-    github: {
-      url: 'https://api.github.com',
-      users: '/users/',
-      repos: '/repos'
-    }
-  })
   .config(function($stateProvider, $urlRouterProvider, $translateProvider, PATH) {
 
     /* Configuração do provider de universalização e da linguagem padrão. */
